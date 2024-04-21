@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "swiper": "^11.1.1",
     "vue": "^3.4.21",
     "vue-i18n": "^10.0.0-alpha.1",
     "vuex-map-fields": "^1.4.1",

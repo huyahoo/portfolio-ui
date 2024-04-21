@@ -7,6 +7,7 @@ import HomeSection from "@/components/HomeSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import SkillsSection from "@/components/SkillsSection.vue";
 import QualificationSection from "@/components/QualificationSection.vue";
+import PortfolioSection from "@/components/PortfolioSection.vue";
 import ContactSection from "@/components/ContactSection.vue";
 
 const skills = ref<Skill[]>([
@@ -109,6 +110,7 @@ const tabs = ref<QualificationTab[]>([
     <about-section />
     <skills-section :skills="skills"/>
     <qualification-section :tabs="tabs"/>
+    <portfolio-section />
     <contact-section />
   </main>
 </template>

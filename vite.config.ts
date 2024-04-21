@@ -9,7 +9,13 @@ import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 export default defineConfig({
   base: '/portfolio-ui/',
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => ['swiper-slide', 'swiper-container'].includes(tag),
+        }
+      }
+    }),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
       strictMessage: false
