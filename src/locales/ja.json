@@ -65,7 +65,7 @@
       },
       "form": {
         "name": "名前",
-        "email": "Email",
+        "email": "メールアドレス",
         "subject": "件名",
         "message": "メッセージ",
         "send": "送信"
@@ -78,7 +78,7 @@
     "skills": "スキル",
     "portfolio": "実績",
     "contact": "問い合わせ",
-    "copyright": "© 2021 Huy. All Rights Reserved."
+    "copyright": "© 2024 Huy. All Rights Reserved."
   },
   "link": {
     "github": "https://github.com/takasugitut",

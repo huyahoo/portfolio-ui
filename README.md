@@ -22,3 +22,6 @@ git add dist -f
 git commit -m "deploy"
 git subtree push --prefix dist origin gh-pages
 ```
+
+## Credit
+`Credit: Many thanks to Bebimcode for this fancy design.`

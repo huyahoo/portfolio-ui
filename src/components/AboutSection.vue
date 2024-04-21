@@ -18,12 +18,12 @@
           </div>
 
           <div>
-            <span class="about__info-title">3+</span>
+            <span class="about__info-title">3</span>
             <span class="about__info-name"> {{ $t("main.about.experience.title") }} <br> {{ $t("main.about.experience.subtitle") }}</span>
           </div>
 
           <div>
-            <span class="about__info-title">4+</span>
+            <span class="about__info-title">4</span>
             <span class="about__info-name"> {{ $t("main.about.worked.title") }} <br> {{ $t("main.about.worked.subtitle") }}</span>
           </div>
         </div>

@@ -1,4 +1,33 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import emailjs from 'emailjs-com';
+
+const name = ref<string>();
+const email = ref<string>();
+const subject = ref<string>();
+const message = ref<string>();
+
+const sendMessage = () => {
+  const params = {
+    name: name.value,
+    email: email.value,
+    subject: subject.value,
+    message: message.value,
+  };
+
+  emailjs.init("dEcT7tpTZVcJ4Zv4-");
+
+  emailjs.send(
+    "service_f1lzrqc",
+    "template_ti4k94g",
+    params,
+  ).then(() => {
+    alert('Message sent successfully');
+  }).catch(() => {
+    alert('An error occurred, please try again');
+  });
+}
+
 </script>
 
 <template>
@@ -35,36 +64,39 @@
         </div>
       </div>
 
-      <form action="" class="contact__form grid">
+      <form action="" id="contact-form" class="contact__form grid">
         <div class="contact__inputs grid">
           <div class="contact__content">
             <label for="name" class="contact__label">{{ $t("main.contact.form.name") }}</label>
-            <input type="text" class="contact__input" id="name" />
+            <input v-model="name" type="text" class="contact__input" id="name" required/>
           </div>
 
           <div class="contact__content">
             <label for="email" class="contact__label">{{ $t("main.contact.form.email") }}</label>
-            <input type="text" class="contact__input" id="email" />
+            <input v-model="email" type="text" class="contact__input" id="email" required/>
           </div>
 
           <div class="contact__content">
             <label for="subject" class="contact__label">{{ $t("main.contact.form.subject") }}</label>
-            <input type="text" class="contact__input" id="subject" />
+            <input v-model="subject" type="text" class="contact__input" id="subject" required/>
           </div>
 
           <div class="contact__content">
             <label for="message" class="contact__label">{{ $t("main.contact.form.message") }}</label>
             <textarea
+              v-model="message"
               name="message"
               id="message"
               cols="0"
               rows="7"
-              class="contact__input">
+              class="contact__input"
+              required
+            >
             </textarea>
           </div>
 
           <div>
-            <a class="button button-flex">
+            <a class="button button-flex" @click="sendMessage()">
               {{ $t("main.contact.form.send") }}
               <i class="uil uil-message button__icon"></i>
             </a>
