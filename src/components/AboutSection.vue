@@ -29,7 +29,7 @@
         </div>
 
         <div class="about__buttons">
-          <a download="PHUNGQUANGHUY_CV.pdf" href="@/assets/cv/20240419_CV.pdf" class="button button-flex">
+          <a download="PHUNGQUANGHUY_CV.pdf" href="../assets/cv/20240419_CV.pdf" class="button button-flex">
             {{ $t("main.about.downloadCv") }}
             <i class="uil uil-download-alt button__icon"></i>
           </a>
