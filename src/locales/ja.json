@@ -1,0 +1,166 @@
+{
+  "header": {
+    "navLogo": "Huy.",
+    "navItems": {
+      "home": "ホーム",
+      "about": "私について",
+      "skills": "スキル",
+      "experiences": "経験",
+      "portfolio": "実績",
+      "contact": "問い合わせ"
+    }
+  },
+  "main": {
+    "home": {
+      "title": "こんにちは、</br>Huy.です！",
+      "subtitle": "ソフトウェアエンジニア",
+      "description": "現在、IMLEX Erasmus Mundus プログラムの修士課程の学生で、拡張現実技術 (XR) の基盤となるイメージング、レンダリング、ライティング技術を勉強しています。",
+      "contactMe": "問い合わせ",
+      "scrollDown": "下にスクロール"
+    },
+    "about": {
+      "title": "私について",
+      "subtitle": "紹介",
+      "description": "3年のフルスタックデベロッパー経験を持ち中小企業向けのウェブサイトやIoTアプリケーションの開発に携わってきました。AIとVR技術にも興味を持ちヨーロッパで修士課程を学んでいます。PythonやVue.jsが得意で常に新しい技術に挑戦する情熱があります。真面目で熱心な性格であり顧客のニーズに応えるために常にこだわりを持って取り組んでいます。多様性のある職場環境を求めておりこれまでの経験と能力を活かしながら新たな分野での挑戦を目指しています。",
+      "downloadCv": "CVダウンロード",
+      "languages": {
+        "title": "言語",
+        "subtitle": "が会話できる"
+      },
+      "experience": {
+        "title": "年",
+        "subtitle": "の経験"
+      },
+      "worked": {
+        "title": "会社",
+        "subtitle": "で働いた"
+      }
+    },
+    "skills": {
+      "title": "スキル",
+      "subtitle": "経験したスキル"
+    },
+    "experiences": {
+      "title": "経験",
+      "subtitle": "学歴・経歴"
+    },
+    "portfolio": {
+      "title": "実績",
+      "subtitle": "取り組んだプロジェクトの一部"
+    },
+    "contact": {
+      "title": "問い合わせ",
+      "subtitle": "連絡を待ちしております",
+      "whatsapp": {
+        "title": "WhatsApp",
+        "subtitle": "+817039875998"
+      },
+      "email": {
+        "title": "Email",
+        "subtitle": "qhuy.phung205{'@'}gmail.com"
+      },
+      "location": {
+        "title": "位置",
+        "subtitle": "愛知県、豊橋市"
+      },
+      "form": {
+        "name": "名前",
+        "email": "Email",
+        "subject": "件名",
+        "message": "メッセージ",
+        "send": "送信"
+      }
+    }
+  },
+  "footer": {
+    "title": "Huy.",
+    "subtitle": "ソフトウェアエンジニア",
+    "skills": "スキル",
+    "portfolio": "実績",
+    "contact": "問い合わせ",
+    "copyright": "© 2021 Huy. All Rights Reserved."
+  },
+  "link": {
+    "github": "https://github.com/takasugitut",
+    "linkedin": "https://www.linkedin.com/in/qhuy-phung205/",
+  },
+  // TODO: Replaced by using API
+  "skills": {
+    "frontend": "フロントエンド開発",
+    "backend": "バックエンド開発",
+    "infra": "インフラ",
+    "ai": "人工知能",
+    "vrxr": "VR/AR",
+    "others": "その他",
+    "experience": "経験",
+    "years": "年"
+  },
+  "tabs": {
+    "education": {
+      "title": "学歴",
+      "data": [
+        {
+          "title": "修士（工学）学位",
+          "subtitle": "豊橋技術科学大学",
+          "location": "愛知県、豊橋市",
+          "startDate": "2023/4",
+          "endDate": "2025/9"
+        },
+        {
+          "title": "Master Optics, Image, Vision, Multimedia with the specialization 'Imaging and Light in Extended Reality'",
+          "subtitle": "ジャン・モネ大学",
+          "location": "フランス、サンテティエンヌ。",
+          "startDate": "2024/1",
+          "endDate": "2024/9"
+        },
+        {
+          "title": "Master of Science in Computer Science 'Imaging and Light in Extended Reality'",
+          "subtitle": "東フィンランド大学",
+          "location": "フィンランド、ヘルシンキ",
+          "startDate": "2023/8",
+          "endDate": "2024/1"
+        },
+        {
+          "title": "学士（工学）学位",
+          "subtitle": "豊橋技術科学大学",
+          "location": "愛知県、豊橋市",
+          "startDate": "2019/4",
+          "endDate": "2023/3"
+        }
+      ]
+    },
+    "work": {
+      "title": "経歴",
+      "data": [
+        {
+          "title": "ソフトウエアエンジニア",
+          "subtitle": "株式会社キビテク",
+          "location": "レモートワーク",
+          "startDate": "2023/5",
+          "endDate": "現在"
+        },
+        {
+          "title": "Data Engineer",
+          "subtitle": "株式会社オリエンタルコンサルタンツ",
+          "location": "レモートワーク",
+          "startDate": "2022/6",
+          "endDate": "2022/12"
+        },
+        {
+          "title": "Research Assistant",
+          "subtitle": "住友電設株式会社",
+          "location": "愛知県、豊田市",
+          "startDate": "2022/4",
+          "endDate": "2022/10"
+        },
+        {
+          "title": "ソフトウエアエンジニア",
+          "subtitle": "株式会社HACHIX",
+          "location": "愛知県、名古屋市",
+          "startDate": "2021/8",
+          "endDate": "2023/8"
+        }
+      ]
+    }
+  }
+}

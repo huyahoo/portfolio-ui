@@ -1,0 +1,166 @@
+{
+  "header": {
+    "navLogo": "Huy.",
+    "navItems": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experiences": "Experiences",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  },
+  "main": {
+    "home": {
+      "title": "Hello, I'm Huy.",
+      "subtitle": "Software Developer",
+      "description": "Currently I am a Master's Student in the IMLEX Erasmus Mundus master's program, major in Imaging and Light in Extended Reality across Finland, France, and Japan.",
+      "contactMe": "Contact me",
+      "scrollDown": "Scroll down"
+    },
+    "about": {
+      "title": "About me",
+      "subtitle": "My introduction",
+      "description": "I have a passion for software development and I love to create creative things. I have experience in building web, IoT applications, AI-based system, ... I'm always looking for new challenges and opportunities to learn and grow.",
+      "downloadCv": "Download CV",
+      "languages": {
+        "title": "Languages",
+        "subtitle": "(VN - JP - EN)"
+      },
+      "experience": {
+        "title": "Years",
+        "subtitle": "Experience"
+      },
+      "worked": {
+        "title": "Companies",
+        "subtitle": "Worked"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "My technical skills"
+    },
+    "experiences": {
+      "title": "Experiences",
+      "subtitle": "My personal journey"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "Here are some of the projects I have worked on:"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch with me",
+      "whatsapp": {
+        "title": "WhatsApp",
+        "subtitle": "+817039875998"
+      },
+      "email": {
+        "title": "Email",
+        "subtitle": "qhuy.phung205{'@'}gmail.com"
+      },
+      "location": {
+        "title": "Location",
+        "subtitle": "Saint-Étienne, France"
+      },
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send Message"
+      }
+    }
+  },
+  "footer": {
+    "title": "Huy.",
+    "subtitle": "Software Developer",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "copyright": "© 2021 Huy. All Rights Reserved."
+  },
+  "link": {
+    "github": "https://github.com/takasugitut",
+    "linkedin": "https://www.linkedin.com/in/qhuy-phung205/",
+  },
+  // TODO: Replaced by using API
+  "skills": {
+    "frontend": "Frontend development",
+    "backend": "Backend development",
+    "infra": "Infrastructure",
+    "ai": "AI",
+    "vrxr": "VR/AR",
+    "others": "Others",
+    "experience": "More than",
+    "years": "years"
+  },
+  "tabs": {
+    "education": {
+      "title": "Education",
+      "data": [
+        {
+          "title": "Master of Engineering",
+          "subtitle": "Toyohashi University of Technology",
+          "location": "Japan, Toyohashi.",
+          "startDate": "2023/4",
+          "endDate": "2025/9"
+        },
+        {
+          "title": "Master Optics, Image, Vision, Multimedia with the specialization 'Imaging and Light in Extended Reality'",
+          "subtitle": "University Jean Monnet",
+          "location": "France, Saint-Etienne.",
+          "startDate": "2024/1",
+          "endDate": "2024/9"
+        },
+        {
+          "title": "Master of Science in Computer Science 'Imaging and Light in Extended Reality'",
+          "subtitle": "University of Eastern Finland",
+          "location": "Finland, Helsinki.",
+          "startDate": "2023/8",
+          "endDate": "2024/1"
+        },
+        {
+          "title": "Bachelor of Engineering",
+          "subtitle": "Toyohashi University of Technology",
+          "location": "Japan, Toyohashi.",
+          "startDate": "2019/4",
+          "endDate": "2023/3"
+        }
+      ]
+    },
+    "work": {
+      "title": "Work",
+      "data": [
+        {
+          "title": "Software Developer",
+          "subtitle": "QibiTech Inc.",
+          "location": "Remote Work.",
+          "startDate": "2023/5",
+          "endDate": "Presence"
+        },
+        {
+          "title": "Data Engineer",
+          "subtitle": "Oriental Consultants Global Co., Ltd.",
+          "location": "Remote Work.",
+          "startDate": "2022/6",
+          "endDate": "2022/12"
+        },
+        {
+          "title": "Research Assistant",
+          "subtitle": "Sumitomo Densetsu Co., Ltd.",
+          "location": "Japan, Toyota.",
+          "startDate": "2022/4",
+          "endDate": "2022/10"
+        },
+        {
+          "title": "Software Developer",
+          "subtitle": "HACHIX Corporation",
+          "location": "Japan, Nagoya.",
+          "startDate": "2021/8",
+          "endDate": "2023/8"
+        }
+      ]
+    }
+  }
+}
