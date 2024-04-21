@@ -14,3 +14,11 @@ This template should help get you started developing with Vue 3 and TypeScript i
 - npm ^10.2.5
 - typescript: ^5.2.2,
 - vite: ^5.2.0,
+
+## Deployment
+```bash
+npm run build
+git add dist -f
+git commit -m "deploy"
+git subtree push --prefix dist origin gh-pages
+```
