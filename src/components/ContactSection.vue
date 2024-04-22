@@ -15,11 +15,11 @@ const sendMessage = () => {
     message: message.value,
   };
 
-  emailjs.init("dEcT7tpTZVcJ4Zv4-");
+  emailjs.init(process.env.VITE_APP_EMAILJS_USER_ID);
 
   emailjs.send(
-    "service_f1lzrqc",
-    "template_ti4k94g",
+    process.env.VITE_APP_EMAILJS_SERVICE_ID,
+    process.env.VITE_APP_EMAILJS_TEMPLATE_ID,
     params,
   ).then(() => {
     alert('Message sent successfully');
