@@ -68,7 +68,10 @@
         "email": "Email",
         "subject": "Subject",
         "message": "Message",
-        "send": "Send Message"
+        "send": "Send Message",
+        "sending": "Sending",
+        "sendSuccess": "Message sent successfully!",
+        "sendError": "An error occurred, please try again!"
       }
     }
   },

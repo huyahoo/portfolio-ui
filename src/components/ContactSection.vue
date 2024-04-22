@@ -1,40 +1,46 @@
 <script setup lang="ts">
-import Swal from 'sweetalert2';
+import { ref, reactive, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useSweetAlert } from '@/mixins/sweetAlertMixin';
 import emailjs from 'emailjs-com';
 
-import { reactive, computed } from 'vue';
+const { t } = useI18n();
+const { fireSweetAlertSuccess, fireSweetAlertError } = useSweetAlert();
 
 const form = reactive({
   name: '',
   email: '',
   subject: '',
-  message: ''
+  message: '',
 });
+const isSending = ref(false);
 
-const disabled = computed(() => {
+const isMissingInput = computed(() => {
   return !form.name || !form.email || !form.subject || !form.message;
 });
 
+const resetForm = () => {
+  for (let key in form) {
+    form[key] = '';
+  }
+};
+
 const sendMessage = () => {
+  isSending.value = true;
+
   emailjs.init(process.env.VITE_APP_EMAILJS_USER_ID);
 
   emailjs
     .send(process.env.VITE_APP_EMAILJS_SERVICE_ID, process.env.VITE_APP_EMAILJS_TEMPLATE_ID, form)
     .then(() => {
-      Swal.fire({
-        title: 'Message sent successfully',
-        icon: 'success',
-        timer: 2000,
-        showConfirmButton: false,
-      });
+      fireSweetAlertSuccess(t('main.contact.form.sendSuccess'));
+      resetForm();
     })
     .catch(() => {
-      Swal.fire({
-        title: 'An error occurred, please try again',
-        icon: 'error',
-        timer: 2000,
-        showConfirmButton: false,
-      });
+      fireSweetAlertError(t('main.contact.form.sendError'));
+    })
+    .finally(() => {
+      isSending.value = false;
     });
 };
 </script>
@@ -147,12 +153,22 @@ const sendMessage = () => {
 
           <div>
             <a
+              v-if="isSending"
+              class="button button-flex disabled"
+              @click="sendMessage()"
+            >
+              {{ $t('main.contact.form.sending') }}
+              <i class="uil uil-spinner-alt button__icon spinner"></i>
+            </a>
+
+            <a
+              v-else
               class="button button-flex"
-              :class="{ 'disabled': disabled }"
+              :class="{ disabled: isMissingInput || isSending }"
               @click="sendMessage()"
             >
               {{ $t('main.contact.form.send') }}
-              <i class="uil uil-message button__icon"></i>
+              <i class="uil uil-message button__icon send-icon"></i>
             </a>
           </div>
         </div>
@@ -205,6 +221,15 @@ const sendMessage = () => {
       border: none;
       outline: none;
       padding: 0.25rem 0.5rem 0.5rem 0;
+    }
+  }
+
+  & .spinner {
+    animation: sending 2s infinite linear;
+    @keyframes sending {
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 }

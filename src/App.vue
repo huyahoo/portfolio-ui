@@ -75,7 +75,7 @@ onMounted(() => {
   border-radius: 0.4rem;
   padding: 0 0.3rem;
   opacity: 0.8;
-  transition: .4s;
+  transition: 0.4s;
   z-index: var(--z-tooltip);
   cursor: pointer;
 
