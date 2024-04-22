@@ -1,35 +1,58 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <footer class="footer">
     <div class="footer__bg">
       <div class="footer__container container grid">
         <div>
-          <h1 class="footer__title">{{ $t("footer.title") }}</h1>
-          <span class="footer__subtitle">{{ $t("footer.subtitle") }}</span>
+          <h1 class="footer__title">{{ $t('footer.title') }}</h1>
+          <span class="footer__subtitle">{{ $t('footer.subtitle') }}</span>
         </div>
 
         <ul class="footer__links">
           <li>
-            <a href="#skills" class="footer__link">{{ $t("footer.skills") }}</a>
+            <a
+              href="#skills"
+              class="footer__link"
+              >{{ $t('footer.skills') }}</a
+            >
           </li>
           <li>
-            <a href="#portfolio" class="footer__link">{{ $t("footer.portfolio") }}</a>
+            <a
+              href="#portfolio"
+              class="footer__link"
+              >{{ $t('footer.portfolio') }}</a
+            >
           </li>
           <li>
-            <a href="#contact" class="footer__link">{{ $t("footer.contact") }}</a>
+            <a
+              href="#contact"
+              class="footer__link"
+              >{{ $t('footer.contact') }}</a
+            >
           </li>
         </ul>
 
         <div class="footer__socials">
-          <a href="https://www.facebook.com/huy.phung.205" target="_blank" class="footer__social">
+          <a
+            href="https://www.facebook.com/huy.phung.205"
+            target="_blank"
+            class="footer__social"
+          >
             <i class="uil uil-facebook-f"></i>
           </a>
-          <a href="https://www.instagram.com/huy.phung.205/" target="_blank" class="footer__social">
+          <a
+            href="https://www.instagram.com/huy.phung.205/"
+            target="_blank"
+            class="footer__social"
+          >
             <i class="uil uil-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/huy-phung-205/" target="_blank" class="footer__social">
+          <a
+            href="https://www.linkedin.com/in/huy-phung-205/"
+            target="_blank"
+            class="footer__social"
+          >
             <i class="uil uil-linkedin"></i>
           </a>
         </div>
@@ -47,12 +70,15 @@
   & .footer__bg {
     background-color: var(--first-color-second);
     padding: 2rem 0 3rem;
-  
+
     & .footer__container {
       row-gap: 2.5rem;
 
-      & .footer__title, .footer__subtitle, .footer__link, .footer__social {
-        color: #FFF;
+      & .footer__title,
+      .footer__subtitle,
+      .footer__link,
+      .footer__social {
+        color: #fff;
       }
 
       & .footer__title {

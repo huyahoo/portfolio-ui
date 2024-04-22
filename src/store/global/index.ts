@@ -5,8 +5,8 @@ const SET_LOCALE = 'SET_LOCALE';
 export default {
   namespaced: true,
   state: {
-    locale: "ja",
-    availableLocales: ["en", "ja"]
+    locale: 'ja',
+    availableLocales: ['en', 'ja'],
   },
   getters: {
     getField,
@@ -14,12 +14,12 @@ export default {
   actions: {
     setLocale({ commit }, payload: string) {
       commit(SET_LOCALE, payload);
-    }
+    },
   },
   mutations: {
     updateField,
-    SET_LOCALE(state: { locale: string; }, payload: string) {
+    SET_LOCALE(state: { locale: string }, payload: string) {
       state.locale = payload;
-    }
+    },
   },
 };

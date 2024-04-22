@@ -6,13 +6,10 @@ export default createStore({
   plugins: [
     createPersistedState({
       key: 'portfolio-local-data',
-      paths: [
-        'global.locale',
-        'global.availableLocales',
-      ],
+      paths: ['global.locale', 'global.availableLocales'],
     }),
   ],
   modules: {
-    global
+    global,
   },
 });

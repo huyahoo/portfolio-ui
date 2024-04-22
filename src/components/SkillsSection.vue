@@ -8,26 +8,32 @@ const props = defineProps<{
 const toggleSkill = (skill: Skill) => {
   skill.show = !skill.show;
 };
-
 </script>
 
 <template>
-  <section class="skills section" id="skills">
-    <h2 class="section__title">{{ $t("main.skills.title") }}</h2>
-    <span class="section__subtitle">{{ $t("main.skills.subtitle") }}</span>
+  <section
+    class="skills section"
+    id="skills"
+  >
+    <h2 class="section__title">{{ $t('main.skills.title') }}</h2>
+    <span class="section__subtitle">{{ $t('main.skills.subtitle') }}</span>
 
     <div class="skills__container container grid">
       <div
-        v-for="skill in props.skills" :key="skill.id"
-        class="skills__content" 
-        :class="[ skill.show ? 'skills__open' : 'skills__close' ]"
+        v-for="skill in props.skills"
+        :key="skill.id"
+        class="skills__content"
+        :class="[skill.show ? 'skills__open' : 'skills__close']"
       >
-      <div class="skills__header" @click="toggleSkill(skill)">
+        <div
+          class="skills__header"
+          @click="toggleSkill(skill)"
+        >
           <i :class="['uil', `${skill.icon}`, 'skills__icon']"></i>
 
           <div>
             <h1 class="skills__title">{{ $t(`${skill.title}`) }}</h1>
-            <span class="skills__subtitle">{{ $t("skills.experience") + skill.subtitle + $t("skills.years") }}</span>
+            <span class="skills__subtitle">{{ $t('skills.experience') + skill.subtitle + $t('skills.years') }}</span>
           </div>
 
           <i class="uil uil-angle-down skills__arrow"></i>
@@ -45,7 +51,10 @@ const toggleSkill = (skill: Skill) => {
             </div>
 
             <div class="skills__bar">
-              <span class="skills__percentage" :style="{ width: `${data.level}%` }"></span>
+              <span
+                class="skills__percentage"
+                :style="{ width: `${data.level}%` }"
+              ></span>
             </div>
           </div>
         </div>
@@ -82,7 +91,8 @@ const toggleSkill = (skill: Skill) => {
     cursor: pointer;
     margin-bottom: var(--mb-2-5);
 
-    & .skills__icon, .skills__arrow {
+    & .skills__icon,
+    .skills__arrow {
       font-size: 2rem;
       color: var(--first-color);
     }
@@ -93,7 +103,7 @@ const toggleSkill = (skill: Skill) => {
 
     & .skills__arrow {
       margin-left: auto;
-      transition: .4s;
+      transition: 0.4s;
     }
 
     & .skills__title {
@@ -117,14 +127,15 @@ const toggleSkill = (skill: Skill) => {
     }
   }
 
-  & .skills__bar, .skills__percentage {
+  & .skills__bar,
+  .skills__percentage {
     height: 5px;
-    border-radius: .25erm;
+    border-radius: 0.25erm;
   }
 
   & .skills__bar {
     background-color: var(--first-color-lighter);
-  
+
     & .skills__percentage {
       display: block;
       background-color: var(--first-color);

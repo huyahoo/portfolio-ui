@@ -37,9 +37,4 @@ type QualificationData = {
   endDate: string;
 };
 
-
-export {
-  NavItem,
-  Skill,
-  QualificationTab,
-};
+export { NavItem, Skill, QualificationTab };

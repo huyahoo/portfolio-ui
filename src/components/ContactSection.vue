@@ -19,33 +19,34 @@ const sendMessage = () => {
 
   emailjs.init(process.env.VITE_APP_EMAILJS_USER_ID);
 
-  emailjs.send(
-    process.env.VITE_APP_EMAILJS_SERVICE_ID,
-    process.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    params,
-  ).then(() => {
-    Swal.fire({
-      title: "Message sent successfully",
-      icon: 'success',
-      timer: 2000,
-      showConfirmButton: false,
+  emailjs
+    .send(process.env.VITE_APP_EMAILJS_SERVICE_ID, process.env.VITE_APP_EMAILJS_TEMPLATE_ID, params)
+    .then(() => {
+      Swal.fire({
+        title: 'Message sent successfully',
+        icon: 'success',
+        timer: 2000,
+        showConfirmButton: false,
+      });
     })
-  }).catch(() => {
-    Swal.fire({
-      title: "An error occurred, please try again",
-      icon: 'error',
-      timer: 2000,
-      showConfirmButton: false,
-    })
-  });
-}
-
+    .catch(() => {
+      Swal.fire({
+        title: 'An error occurred, please try again',
+        icon: 'error',
+        timer: 2000,
+        showConfirmButton: false,
+      });
+    });
+};
 </script>
 
 <template>
-  <section class="contact section" id="contact">
-    <h2 class="section__title">{{ $t("main.contact.title") }}</h2>
-    <span class="section__subtitle">{{ $t("main.contact.subtitle") }}</span>
+  <section
+    class="contact section"
+    id="contact"
+  >
+    <h2 class="section__title">{{ $t('main.contact.title') }}</h2>
+    <span class="section__subtitle">{{ $t('main.contact.subtitle') }}</span>
 
     <div class="contact__container container grid">
       <div>
@@ -53,16 +54,16 @@ const sendMessage = () => {
           <i class="uil uil-whatsapp contact__icon"></i>
 
           <div>
-            <h3 class="contact__title">{{ $t("main.contact.whatsapp.title") }}</h3>
-            <span class="contact__subtitle">{{ $t("main.contact.whatsapp.subtitle") }}</span>
+            <h3 class="contact__title">{{ $t('main.contact.whatsapp.title') }}</h3>
+            <span class="contact__subtitle">{{ $t('main.contact.whatsapp.subtitle') }}</span>
           </div>
         </div>
 
         <div class="contact__information">
           <i class="uil uil-envelope contact__icon"></i>
           <div>
-            <h3 class="contact__title">{{ $t("main.contact.email.title") }}</h3>
-            <span class="contact__subtitle">{{ $t("main.contact.email.subtitle") }}</span>
+            <h3 class="contact__title">{{ $t('main.contact.email.title') }}</h3>
+            <span class="contact__subtitle">{{ $t('main.contact.email.subtitle') }}</span>
           </div>
         </div>
 
@@ -70,31 +71,69 @@ const sendMessage = () => {
           <i class="uil uil-map-marker contact__icon"></i>
 
           <div>
-            <h3 class="contact__title">{{ $t("main.contact.location.title") }}</h3>
-            <span class="contact__subtitle">{{ $t("main.contact.location.subtitle") }}</span>
+            <h3 class="contact__title">{{ $t('main.contact.location.title') }}</h3>
+            <span class="contact__subtitle">{{ $t('main.contact.location.subtitle') }}</span>
           </div>
         </div>
       </div>
 
-      <form action="" id="contact-form" class="contact__form grid">
+      <form
+        action=""
+        id="contact-form"
+        class="contact__form grid"
+      >
         <div class="contact__inputs grid">
           <div class="contact__content">
-            <label for="name" class="contact__label">{{ $t("main.contact.form.name") }}</label>
-            <input v-model="name" type="text" class="contact__input" id="name" required/>
+            <label
+              for="name"
+              class="contact__label"
+              >{{ $t('main.contact.form.name') }}</label
+            >
+            <input
+              v-model="name"
+              type="text"
+              class="contact__input"
+              id="name"
+              required
+            />
           </div>
 
           <div class="contact__content">
-            <label for="email" class="contact__label">{{ $t("main.contact.form.email") }}</label>
-            <input v-model="email" type="text" class="contact__input" id="email" required/>
+            <label
+              for="email"
+              class="contact__label"
+              >{{ $t('main.contact.form.email') }}</label
+            >
+            <input
+              v-model="email"
+              type="text"
+              class="contact__input"
+              id="email"
+              required
+            />
           </div>
 
           <div class="contact__content">
-            <label for="subject" class="contact__label">{{ $t("main.contact.form.subject") }}</label>
-            <input v-model="subject" type="text" class="contact__input" id="subject" required/>
+            <label
+              for="subject"
+              class="contact__label"
+              >{{ $t('main.contact.form.subject') }}</label
+            >
+            <input
+              v-model="subject"
+              type="text"
+              class="contact__input"
+              id="subject"
+              required
+            />
           </div>
 
           <div class="contact__content">
-            <label for="message" class="contact__label">{{ $t("main.contact.form.message") }}</label>
+            <label
+              for="message"
+              class="contact__label"
+              >{{ $t('main.contact.form.message') }}</label
+            >
             <textarea
               v-model="message"
               name="message"
@@ -108,8 +147,11 @@ const sendMessage = () => {
           </div>
 
           <div>
-            <a class="button button-flex" @click="sendMessage()">
-              {{ $t("main.contact.form.send") }}
+            <a
+              class="button button-flex"
+              @click="sendMessage()"
+            >
+              {{ $t('main.contact.form.send') }}
               <i class="uil uil-message button__icon"></i>
             </a>
           </div>
@@ -144,11 +186,10 @@ const sendMessage = () => {
     }
   }
 
-
   & .contact__content {
     background-color: var(--input-color);
-    border-radius: .5rem;
-    padding: .75rem 1rem .25rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem 0.25rem;
 
     & .contact__label {
       font-size: var(--smaller-font-size);
@@ -163,7 +204,7 @@ const sendMessage = () => {
       font-size: var(--normal-font-size);
       border: none;
       outline: none;
-      padding: .25rem .5rem .5rem 0;
+      padding: 0.25rem 0.5rem 0.5rem 0;
     }
   }
 }

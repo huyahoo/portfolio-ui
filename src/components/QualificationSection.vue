@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import type { QualificationTab } from '@/types/schema';
 
 const props = defineProps<{
@@ -17,9 +16,12 @@ const toggleQualification = (tabId: number) => {
 </script>
 
 <template>
-  <section class="qualification section" id="experiences">
-    <h2 class="section__title">{{ $t("main.experiences.title") }}</h2>
-    <span class="section__subtitle">{{ $t("main.experiences.subtitle") }}</span>
+  <section
+    class="qualification section"
+    id="experiences"
+  >
+    <h2 class="section__title">{{ $t('main.experiences.title') }}</h2>
+    <span class="section__subtitle">{{ $t('main.experiences.subtitle') }}</span>
 
     <div class="qualification__container container">
       <div class="qualification__tabs">
@@ -27,7 +29,7 @@ const toggleQualification = (tabId: number) => {
           v-for="tab in props.tabs"
           :key="tab.id"
           class="qualification__button button-flex"
-          :class="{ 'qualification__active': tab.active }"
+          :class="{ qualification__active: tab.active }"
           @click="toggleQualification(tab.id)"
         >
           <i :class="['uil', `${tab.icon}`, 'qualification__icon']"></i>
@@ -40,7 +42,7 @@ const toggleQualification = (tabId: number) => {
         :key="tab.id"
         class="qualification__sections"
       >
-        <div 
+        <div
           :id="tab.name"
           class="qualification__content"
           :class="[tab.active ? 'qualification__active' : 'qualification__inactive']"
@@ -49,20 +51,20 @@ const toggleQualification = (tabId: number) => {
             v-for="data in tab.data"
             class="qualification__data"
           >
-          <div v-if="data.id % 2 === 0"></div>
-          <div  v-if="data.id % 2 === 0">
-            <span class="qualification__rounder"></span>
-            <span class="qualification__line"></span>
-          </div>
+            <div v-if="data.id % 2 === 0"></div>
+            <div v-if="data.id % 2 === 0">
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
 
             <div>
               <h3 class="qualification__title">{{ $t(`${data.title}`) }}</h3>
               <span class="qualification__subtitle">{{ $t(`${data.subtitle}`) }}</span>
               <div class="qualification__calendar">
-              <p>{{ $t(`${data.location}`) }}</p>
+                <p>{{ $t(`${data.location}`) }}</p>
 
                 <i class="uil uil-calendar-alt"></i>
-                {{ $t(`${data.startDate}`) + " - " + $t(`${data.endDate}`) }}
+                {{ $t(`${data.startDate}`) + ' - ' + $t(`${data.endDate}`) }}
               </div>
             </div>
 
@@ -78,12 +80,11 @@ const toggleQualification = (tabId: number) => {
 </template>
 
 <style scoped lang="scss">
-
 .qualification__sections {
   & .qualification__inactive {
     display: none;
   }
-  
+
   & .qualification__active {
     display: block;
   }
@@ -154,14 +155,14 @@ const toggleQualification = (tabId: number) => {
 
 @media screen and (max-width: 350px) {
   .qualification__data {
-    gap: .5rem !important;
+    gap: 0.5rem !important;
   }
 }
 
 @media screen and (min-width: 568px) {
   .qualification__sections {
     display: grid;
-    grid-template-columns: .6fr;
+    grid-template-columns: 0.6fr;
     justify-content: center;
   }
 }
@@ -176,7 +177,7 @@ const toggleQualification = (tabId: number) => {
   }
 
   .qualification__sections {
-    grid-template-columns: .5fr;
+    grid-template-columns: 0.5fr;
   }
 }
 </style>

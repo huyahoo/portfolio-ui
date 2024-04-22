@@ -12,61 +12,59 @@ const scrollActive = (sections: Array<any>) => {
     sections.forEach((current) => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 50;
-      const sectionId = current.getAttribute("id");
+      const sectionId = current.getAttribute('id');
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document
-          .querySelector(".nav__menu a[href*=" + sectionId + "]")
-          .classList.add("active-link");
-      }  else {
-        document
-          .querySelector(".nav__menu a[href*=" + sectionId + "]")
-          .classList.remove("active-link");
+        document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+      } else {
+        document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
       }
     });
   };
 };
 
 const scrollHeader = () => {
-  const header = document.getElementById("header");
+  const header = document.getElementById('header');
   const scrollY = window.scrollY;
 
   if (scrollY >= 80) {
-    header.classList.add("scroll-header");
+    header.classList.add('scroll-header');
   } else {
-    header.classList.remove("scroll-header");
+    header.classList.remove('scroll-header');
   }
 };
 
 const scrollUp = () => {
-  const scrollUp = document.getElementById("scroll-up");
+  const scrollUp = document.getElementById('scroll-up');
   const scrollY = window.scrollY;
 
   if (scrollY >= 560) {
-    scrollUp.classList.add("show-scroll");
+    scrollUp.classList.add('show-scroll');
   } else {
-    scrollUp.classList.remove("show-scroll");
+    scrollUp.classList.remove('show-scroll');
   }
 };
 
 onMounted(() => {
-  const sections = document.querySelectorAll("section[id]");
-  window.addEventListener("scroll", scrollActive(Array.from(sections)));
-  window.addEventListener("scroll", scrollHeader);
-  window.addEventListener("scroll", scrollUp);
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', scrollActive(Array.from(sections)));
+  window.addEventListener('scroll', scrollHeader);
+  window.addEventListener('scroll', scrollUp);
 });
-
 </script>
 
 <template>
   <Header />
   <Main />
   <Footer />
-  <a href="" class="scrollup" id="scroll-up">
+  <a
+    href=""
+    class="scrollup"
+    id="scroll-up"
+  >
     <i class="uil uil-arrow-up scrollup__icon"></i>
   </a>
 </template>
-
 
 <style scoped lang="scss">
 .scrollup {
@@ -75,8 +73,8 @@ onMounted(() => {
   bottom: -20%;
   background-color: var(--first-color);
   border-radius: 0.4rem;
-  padding: 0 .3rem;
-  opacity: .8;
+  padding: 0 0.3rem;
+  opacity: 0.8;
   transition: 0.4s;
   z-index: var(--z-tooltip);
   cursor: pointer;
@@ -87,7 +85,7 @@ onMounted(() => {
 
   &__icon {
     font-size: 1.5rem;
-    color: #FFF;
+    color: #fff;
   }
 }
 
