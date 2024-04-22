@@ -1,12 +1,16 @@
 import { createApp } from 'vue';
-import store from './store';
 import App from './App.vue';
-import i18n from './plugins/i18n';
-import { register } from 'swiper/element/bundle';
+const app = createApp(App);
+
 import './assets/styles/index.scss';
 
-const app = createApp(App);
+import { register } from 'swiper/element/bundle';
 register();
+
+import store from './store';
 app.use(store);
+
+import i18n from './plugins/i18n';
 app.use(i18n);
+
 app.mount('#app');

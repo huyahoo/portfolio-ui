@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
+
+import { ref } from 'vue';
 
 const name = ref<string>();
 const email = ref<string>();
@@ -22,9 +24,19 @@ const sendMessage = () => {
     process.env.VITE_APP_EMAILJS_TEMPLATE_ID,
     params,
   ).then(() => {
-    alert('Message sent successfully');
+    Swal.fire({
+      title: "Message sent successfully",
+      icon: 'success',
+      timer: 2000,
+      showConfirmButton: false,
+    })
   }).catch(() => {
-    alert('An error occurred, please try again');
+    Swal.fire({
+      title: "An error occurred, please try again",
+      icon: 'error',
+      timer: 2000,
+      showConfirmButton: false,
+    })
   });
 }
 
