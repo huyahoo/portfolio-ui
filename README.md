@@ -16,17 +16,15 @@ npm install
 ```
 
 ## Deployment
-[How to deploy your Vite Vue 3 application in GitHub Pages](https://mkay11.medium.com/how-to-deploy-your-vite-vue-3-application-in-github-pages-2023-2b842f50576a)
-
+``` bash
+npm run deploy
+```
+or 
 ``` bash
 npm run build
 git add dist -f
 git commit -m "deploy"
 git subtree push --prefix dist origin gh-pages
-```
-or 
-``` bash
-npm run deploy
 ```
 
 ## Eslint + Prettier
@@ -38,6 +36,8 @@ npm run prettier
 [Create Resolve Aliases for Imports](https://futurestud.io/tutorials/vite-create-resolve-aliases-for-imports-like-the-symbol)
 
 [Eslint + Prettier](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)
+
+[How to deploy your Vite Vue 3 application in GitHub Pages](https://mkay11.medium.com/how-to-deploy-your-vite-vue-3-application-in-github-pages-2023-2b842f50576a)
 
 
 ## Acknowledgments
