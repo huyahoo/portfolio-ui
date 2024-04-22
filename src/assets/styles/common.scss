@@ -41,6 +41,14 @@
   align-items: center;
 }
 
+a {
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: var(--first-color-disabled);
+  }
+}
+
 .button-small {
   padding: .75rem 1.5rem;
 }

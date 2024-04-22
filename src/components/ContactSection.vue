@@ -2,25 +2,24 @@
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 
-import { ref } from 'vue';
+import { reactive, computed } from 'vue';
 
-const name = ref<string>();
-const email = ref<string>();
-const subject = ref<string>();
-const message = ref<string>();
+const form = reactive({
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
+});
+
+const disabled = computed(() => {
+  return !form.name || !form.email || !form.subject || !form.message;
+});
 
 const sendMessage = () => {
-  const params = {
-    name: name.value,
-    email: email.value,
-    subject: subject.value,
-    message: message.value,
-  };
-
   emailjs.init(process.env.VITE_APP_EMAILJS_USER_ID);
 
   emailjs
-    .send(process.env.VITE_APP_EMAILJS_SERVICE_ID, process.env.VITE_APP_EMAILJS_TEMPLATE_ID, params)
+    .send(process.env.VITE_APP_EMAILJS_SERVICE_ID, process.env.VITE_APP_EMAILJS_TEMPLATE_ID, form)
     .then(() => {
       Swal.fire({
         title: 'Message sent successfully',
@@ -90,7 +89,7 @@ const sendMessage = () => {
               >{{ $t('main.contact.form.name') }}</label
             >
             <input
-              v-model="name"
+              v-model="form.name"
               type="text"
               class="contact__input"
               id="name"
@@ -105,7 +104,7 @@ const sendMessage = () => {
               >{{ $t('main.contact.form.email') }}</label
             >
             <input
-              v-model="email"
+              v-model="form.email"
               type="text"
               class="contact__input"
               id="email"
@@ -120,7 +119,7 @@ const sendMessage = () => {
               >{{ $t('main.contact.form.subject') }}</label
             >
             <input
-              v-model="subject"
+              v-model="form.subject"
               type="text"
               class="contact__input"
               id="subject"
@@ -135,7 +134,7 @@ const sendMessage = () => {
               >{{ $t('main.contact.form.message') }}</label
             >
             <textarea
-              v-model="message"
+              v-model="form.message"
               name="message"
               id="message"
               cols="0"
@@ -149,6 +148,7 @@ const sendMessage = () => {
           <div>
             <a
               class="button button-flex"
+              :class="{ 'disabled': disabled }"
               @click="sendMessage()"
             >
               {{ $t('main.contact.form.send') }}
