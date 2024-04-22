@@ -92,8 +92,8 @@
     "ai": "AI",
     "vrxr": "VR/AR",
     "others": "Others",
-    "experience": "More than",
-    "years": "years"
+    "experience": "More than ",
+    "years": " years"
   },
   "tabs": {
     "education": {
