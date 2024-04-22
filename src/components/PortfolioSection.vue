@@ -94,7 +94,7 @@
   overflow: initial;
 
   & .portfolio__content {
-    padding: 0 3rem;
+    padding: 0 3rem 3rem;
 
     & .portfolio__img {
       width: 265px;

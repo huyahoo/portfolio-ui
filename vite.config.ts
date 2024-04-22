@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 import { resolve, dirname } from "node:path";
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 
-export default defineConfig(({ command, mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
   return {
     base: '/portfolio-ui/',
     define: {
@@ -31,5 +31,6 @@ export default defineConfig(({ command, mode }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
+    assetsInclude: ['**/*.zip', '**/*.pdf', '**/*.xlsx', '**/*.csv'],
   }
 })
