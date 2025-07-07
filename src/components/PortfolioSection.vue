@@ -19,9 +19,10 @@
         <swiper-slide>
           <div class="portfolio__content grid">
             <img
-              src="../assets/portfolio/portfolio-website.png"
-              alt=""
+              src="../assets/portfolio/portfolio-website.webp"
+              alt="Portfolio Website"
               class="portfolio__img"
+              loading="lazy"
             />
 
             <div class="portfolio__data">
@@ -40,9 +41,10 @@
         <swiper-slide>
           <div class="portfolio__content grid">
             <img
-              src="../assets/portfolio/3d-visualization.png"
-              alt=""
+              src="../assets/portfolio/3d-visualization.webp"
+              alt="3D Visualization"
               class="portfolio__img"
+              loading="lazy"
             />
 
             <div class="portfolio__data">
@@ -64,9 +66,10 @@
         <swiper-slide>
           <div class="portfolio__content grid">
             <img
-              src="../assets/portfolio/cuda-omp.png"
-              alt=""
+              src="../assets/portfolio/cuda-omp.webp"
+              alt="CUDA and OpenMP Image Processing"
               class="portfolio__img"
+              loading="lazy"
             />
 
             <div class="portfolio__data">
@@ -85,9 +88,10 @@
         <swiper-slide>
           <div class="portfolio__content grid">
             <img
-              src="../assets/portfolio/svm.png"
-              alt=""
+              src="../assets/portfolio/svm.webp"
+              alt="SVM Classifier"
               class="portfolio__img"
+              loading="lazy"
             />
 
             <div class="portfolio__data">
@@ -109,9 +113,10 @@
         <swiper-slide>
           <div class="portfolio__content grid">
             <img
-              src="../assets/portfolio/auto-encoder.png"
-              alt=""
+              src="../assets/portfolio/auto-encoder.webp"
+              alt="Variational Auto Encoder"
               class="portfolio__img"
+              loading="lazy"
             />
 
             <div class="portfolio__data">

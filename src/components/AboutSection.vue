@@ -12,9 +12,10 @@ import cvZipLink from '@/assets/cv/PHUNGQUANGHUY.zip';
 
     <div class="about__container container grid">
       <img
-        src="@/assets/images/perfil.jpeg"
-        alt=""
+        src="@/assets/images/perfil.webp"
+        alt="About me"
         class="about__img"
+        loading="lazy"
       />
       <div class="about__data">
         <p class="about__description">{{ $t('main.about.description') }}</p>

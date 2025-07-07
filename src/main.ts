@@ -3,6 +3,7 @@ import App from './App.vue';
 const app = createApp(App);
 
 import './assets/styles/index.scss';
+import '@iconscout/unicons/css/line.css';
 
 import { register } from 'swiper/element/bundle';
 register();

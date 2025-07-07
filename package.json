@@ -13,12 +13,14 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@iconscout/unicons": "^4.2.0",
     "@intlify/unplugin-vue-i18n": "^4.0.0",
     "emailjs-com": "^3.2.0",
     "swiper": "^11.1.1",
     "vue": "^3.4.21",
     "vue-i18n": "^10.0.0-alpha.1",
     "vue-sweetalert2": "^5.0.5",
+    "vuex": "^4.1.0",
     "vuex-map-fields": "^1.4.1",
     "vuex-persistedstate": "^4.1.0",
     "vuex-plugin-persistedstate": "^1.0.6"

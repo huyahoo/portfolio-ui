@@ -55,7 +55,7 @@
                 class="home__blob-img"
                 x="10"
                 y="50"
-                xlink:href="@/assets/images/avatar.png"
+                xlink:href="@/assets/images/avatar.webp"
               />
             </g>
           </svg>
