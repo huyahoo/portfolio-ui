@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# GitHub Pages sitemap location
+Sitemap: https://takasugitut.github.io/portfolio-ui/sitemap.xml
+
+# Disallow development and build files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/ 
