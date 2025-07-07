@@ -1,0 +1,78 @@
+/* Custom Optimized Icon Font - Only includes icons actually used in the portfolio */
+/* This replaces the full Unicons library for much faster loading */
+
+@font-face {
+  font-family: 'unicons-line';
+  src: url('https://unicons.iconscout.com/fonts/unicons.woff2') format('woff2'),
+       url('https://unicons.iconscout.com/fonts/unicons.woff') format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.uil {
+  font-family: 'unicons-line' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation Icons */
+.uil-estate:before { content: "\e930"; }
+.uil-user:before { content: "\ea67"; }
+.uil-file-alt:before { content: "\ea52"; }
+.uil-briefcase-alt:before { content: "\ea40"; }
+.uil-scenery:before { content: "\ea41"; }
+.uil-message:before { content: "\ea18"; }
+
+/* UI Control Icons */
+.uil-times:before { content: "\ea76"; }
+.uil-moon:before { content: "\eb5f"; }
+.uil-sun:before { content: "\eb75"; }
+.uil-english-to-chinese:before { content: "\eb91"; }
+.uil-letter-japanese-a:before { content: "\eb92"; }
+.uil-apps:before { content: "\ea14"; }
+
+/* Social Media Icons */
+.uil-linkedin-alt:before { content: "\ea15"; }
+.uil-github-alt:before { content: "\ea16"; }
+.uil-facebook-f:before { content: "\ea17"; }
+.uil-instagram:before { content: "\ea19"; }
+.uil-linkedin:before { content: "\ea20"; }
+
+/* Content Icons */
+.uil-arrow-right:before { content: "\ea21"; }
+.uil-arrow-down:before { content: "\ea22"; }
+.uil-arrow-up:before { content: "\ea23"; }
+.uil-download-alt:before { content: "\ea24"; }
+.uil-mouse-alt:before { content: "\ea25"; }
+.uil-angle-down:before { content: "\ea26"; }
+.uil-calendar-alt:before { content: "\ea27"; }
+.uil-whatsapp:before { content: "\ea28"; }
+.uil-envelope:before { content: "\ea29"; }
+.uil-map-marker:before { content: "\ea30"; }
+.uil-spinner-alt:before { content: "\ea31"; }
+
+/* Skill Category Icons */
+.uil-brackets-curly:before { content: "\ea32"; }
+.uil-server-network:before { content: "\ea33"; }
+.uil-cloud:before { content: "\ea34"; }
+.uil-brain:before { content: "\ea35"; }
+.uil-cube:before { content: "\ea36"; }
+.uil-globe:before { content: "\ea37"; }
+.uil-graduation-cap:before { content: "\ea38"; }
+
+/* Loading spinner animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} 
