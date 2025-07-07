@@ -12,6 +12,7 @@
             :href="$t('link.linkedin')"
             target="_blank"
             class="home__social-icon"
+            aria-label="LinkedIn"
           >
             <i class="uil uil-linkedin-alt"></i>
           </a>
@@ -20,6 +21,7 @@
             :href="$t('link.github')"
             target="_blank"
             class="home__social-icon"
+            aria-label="Github"
           >
             <i class="uil uil-github-alt"></i>
           </a>

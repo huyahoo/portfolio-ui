@@ -38,6 +38,7 @@
             href="https://www.facebook.com/huy.phung.205"
             target="_blank"
             class="footer__social"
+            aria-label="Facebook"
           >
             <i class="uil uil-facebook-f"></i>
           </a>
@@ -45,6 +46,7 @@
             href="https://www.instagram.com/huy.phung.205/"
             target="_blank"
             class="footer__social"
+            aria-label="Instagram"
           >
             <i class="uil uil-instagram"></i>
           </a>
@@ -52,6 +54,7 @@
             href="https://www.linkedin.com/in/huy-phung-205/"
             target="_blank"
             class="footer__social"
+            aria-label="LinkedIn"
           >
             <i class="uil uil-linkedin"></i>
           </a>

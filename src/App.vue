@@ -61,6 +61,7 @@ onMounted(() => {
     href="#home"
     class="scrollup"
     id="scroll-up"
+    aria-label="Scroll to top"
   >
     <i class="uil uil-arrow-up scrollup__icon"></i>
   </a>
