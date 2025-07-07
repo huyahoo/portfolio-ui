@@ -2,123 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Performance and SEO meta tags -->
-    <meta name="description" content="Huy Phung - Software Developer specializing in Vue.js, Python, AI, and VR/AR technologies. Master's student in IMLEX Erasmus Mundus program.">
-    <meta name="keywords" content="software developer, vue.js, python, AI, machine learning, VR, AR, portfolio">
-    <meta name="author" content="Huy Phung">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Huy Phung - Software Developer Portfolio">
-    <meta property="og:description" content="Software Developer specializing in Vue.js, Python, AI, and VR/AR technologies">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://takasugitut.github.io/portfolio-ui/">
-    
     <link rel="icon" type="image/svg+xml" href="/portfolio-ui/vite.svg" />
-    
-    <!-- Preconnect to external font sources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://unicons.iconscout.com">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/portfolio-ui/assets/avatar-CY31UjkU.png" as="image" type="image/png">
-    
-    <!-- Expanded Critical CSS for above-the-fold content -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <style>
-      /* CSS Reset and Base Styles */
-      *{margin:0;padding:0;box-sizing:border-box}
-      html{scroll-behavior:smooth}
-      body{margin:0;font-family:'Poppins',sans-serif;font-size:.938rem;background-color:hsl(250,60%,99%);color:hsl(250,8%,45%)}
-      h1,h2,h3,h4{color:hsl(250,8%,15%);font-weight:600}
-      ul{list-style:none}
-      a{text-decoration:none}
-      img{max-width:100%;height:auto}
-      
-      /* Layout Utilities */
-      .container{max-width:768px;margin-left:1.5rem;margin-right:1.5rem}
-      .grid{display:grid;gap:1.5rem}
-      .section{padding:2rem 0 4rem}
-      .section__title{font-size:1.5rem;text-align:center}
-      .section__subtitle{display:block;font-size:.813rem;margin-bottom:3rem;text-align:center}
-      
-      /* Header Styles */
-      .header{width:100%;position:fixed;bottom:0;left:0;z-index:100;background-color:#fff}
-      .nav{height:3rem;display:flex;justify-content:space-between;align-items:center}
-      .nav__logo{color:hsl(250,8%,15%);font-weight:600}
-      .nav__menu{position:fixed;bottom:-100%;left:0;width:100%;background-color:#fff;padding:2rem 1.5rem 4rem;box-shadow:0 -1px 4px rgba(0,0,0,.15);border-radius:1.5rem 1.5rem 0 0;transition:.3s}
-      .show-menu{bottom:0}
-      .nav__list{grid-template-columns:repeat(3,1fr);gap:2rem}
-      .nav__link{display:flex;flex-direction:column;align-items:center;font-size:.813rem;color:hsl(250,8%,45%);font-weight:500}
-      .nav__link:hover{color:hsl(250,69%,61%)}
-      .nav__icon{font-size:1.2rem}
-      .nav__close{position:absolute;right:1.3rem;bottom:.5rem;font-size:1.5rem;cursor:pointer;color:hsl(250,69%,61%)}
-      .nav__close:hover{color:hsl(250,57%,53%)}
-      
-      /* Button Styles */
-      .button{display:inline-block;background-color:hsl(250,69%,61%);color:#FFF;padding:1rem;border-radius:.5rem;font-weight:500;transition:.3s}
-      .button:hover{background-color:hsl(250,57%,53%)}
-      .button__icon{font-size:1.25rem;margin-left:.5rem;transition:.3s}
-      .button-flex{display:inline-flex;align-items:center}
-      
-      /* Home Section Critical Styles */
-      .home__container{gap:1rem}
-      .home__content{grid-template-columns:0.5fr 3fr;padding-top:3.5rem;align-items:center}
-      .home__social{display:grid;grid-template-columns:max-content;row-gap:1rem}
-      .home__social-icon{font-size:1.25rem;color:hsl(250,69%,61%)}
-      .home__social-icon:hover{color:hsl(250,57%,53%)}
-      .home__blob{width:200px;fill:hsl(250,69%,61%)}
-      .home__blob-img{width:170px}
-      .home__data{grid-column:1/3}
-      .home__title{font-size:2rem}
-      .home__subtitle{font-size:1.125rem;color:hsl(250,8%,45%);font-weight:500;margin-bottom:.75rem}
-      .home__description{margin-bottom:2rem}
-      
-      /* Navigation Theme Controls */
-      .nav__btns{display:flex;align-items:center}
-      .change-theme{font-size:1.25rem;color:hsl(250,8%,15%);margin-right:1rem;cursor:pointer}
-      .change-theme:hover{color:hsl(250,69%,61%)}
-      .nav__toggle{font-size:1.1rem;cursor:pointer}
-      .nav__toggle:hover{color:hsl(250,69%,61%)}
-      
-      /* Mobile-first responsive adjustments */
-      @media screen and (min-width:568px){
-        .container{margin-left:auto;margin-right:auto}
-        .home__content{grid-template-columns:max-content 1fr 1fr}
-        .home__data{grid-column:initial}
-        .home__img{order:1;justify-self:center}
-      }
-      @media screen and (min-width:768px){
-        body{margin:0}
-        .header{top:0;bottom:initial}
-        .nav{height:calc(3rem + 1.5rem);column-gap:1rem}
-        .nav__icon,.nav__close,.nav__toggle{display:none}
-        .nav__list{display:flex;column-gap:2rem}
-        .nav__menu{margin-left:auto}
-        .change-theme{margin:0}
-        .home__content{padding-top:5.5rem;column-gap:2rem}
-        .home__blob{width:270px}
-        .home__scroll{display:block}
-        .section{padding:6rem 0 2rem}
-      }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
     </style>
-    
-    <!-- Optimized font loading with font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Optimized Custom Icon CSS - replaces full Unicons library -->
-    <link rel="preload" href="/portfolio-ui/custom-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/portfolio-ui/custom-icons.css"></noscript>
-    
-    <title>Huy Phung - Software Developer Portfolio</title>
-    <script type="module" crossorigin src="/portfolio-ui/assets/index-CYi93hzq.js"></script>
-    <link rel="modulepreload" crossorigin href="/portfolio-ui/assets/vendor-GmNtS4Nw.js">
-    <link rel="modulepreload" crossorigin href="/portfolio-ui/assets/emailjs-9VhfjYX2.js">
-    <link rel="modulepreload" crossorigin href="/portfolio-ui/assets/swiper-BJDVX726.js">
-    <link rel="stylesheet" crossorigin href="/portfolio-ui/assets/index-DKKE-ZST.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script type="module" crossorigin src="/portfolio-ui/assets/index-CIvsHVnr.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-ui/assets/index-DKSG0QJK.css">
   </head>
   <body>
     <div id="app"></div>
