@@ -2,17 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio-ui/vite.svg" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <script type="module" crossorigin src="/portfolio-ui/assets/index-Cra4iKFz.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-ui/assets/index-BIFUWWDI.css">
+    
+    <!-- Performance and SEO meta tags -->
+    <meta name="description" content="Huy Phung - Software Developer specializing in Vue.js, Python, AI, and VR/AR technologies. Master's student in IMLEX Erasmus Mundus program.">
+    <meta name="keywords" content="software developer, vue.js, python, AI, machine learning, VR, AR, portfolio">
+    <meta name="author" content="Huy Phung">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Huy Phung - Software Developer Portfolio">
+    <meta property="og:description" content="Software Developer specializing in Vue.js, Python, AI, and VR/AR technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://takasugitut.github.io/portfolio-ui/">
+    
+    <link rel="icon" type="image/svg+xml" href="/portfolio-ui/vite.svg" />
+    
+    <!-- Preconnect to external font sources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/portfolio-ui/assets/avatar-CY31UjkU.png" as="image" type="image/png">
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      body{margin:0;font-family:'Poppins',sans-serif;font-size:.938rem;background-color:hsl(250,60%,99%);color:hsl(250,8%,45%)}
+      .header{width:100%;position:fixed;bottom:0;left:0;z-index:100;background-color:#fff}
+      .nav{height:3rem;display:flex;justify-content:space-between;align-items:center}
+      .container{max-width:768px;margin-left:1.5rem;margin-right:1.5rem}
+      .section{padding:2rem 0 4rem}
+      .home__container{gap:1rem}
+      .home__content{grid-template-columns:0.5fr 3fr;padding-top:3.5rem;align-items:center}
+      .grid{display:grid;gap:1.5rem}
+      .button{display:inline-block;background-color:hsl(250,69%,61%);color:#FFF;padding:1rem;border-radius:.5rem;font-weight:500}
+      .home__blob{width:200px;fill:hsl(250,69%,61%)}
+      .home__blob-img{width:170px}
+    </style>
+    
+    <!-- Optimized font loading with font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload Unicons CSS -->
+    <link rel="preload" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></noscript>
+    
+    <title>Huy Phung - Software Developer Portfolio</title>
+    <script type="module" crossorigin src="/portfolio-ui/assets/index-DWrE1LD2.js"></script>
+    <link rel="modulepreload" crossorigin href="/portfolio-ui/assets/vendor-B3-W4Pcl.js">
+    <link rel="modulepreload" crossorigin href="/portfolio-ui/assets/emailjs-9VhfjYX2.js">
+    <link rel="modulepreload" crossorigin href="/portfolio-ui/assets/swiper-BJDVX726.js">
+    <link rel="stylesheet" crossorigin href="/portfolio-ui/assets/index-BFRqIjEH.css">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"></div>
   </body>
 </html>
