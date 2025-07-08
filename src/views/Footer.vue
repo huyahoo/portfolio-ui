@@ -119,7 +119,7 @@
       & .footer__copy {
         font-size: var(--smaller-font-size);
         text-align: center;
-        color: var(--title-color);
+        color: #fff;
       }
     }
   }
