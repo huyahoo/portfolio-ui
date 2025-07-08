@@ -8,7 +8,7 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
-    base: '/portfolio-ui/',
+    // base: '/portfolio-ui/',
     define: {
       'process.env': env,
     },
