@@ -152,25 +152,25 @@ const sendMessage = () => {
           </div>
 
           <div>
-            <a
+            <button
               v-if="isSending"
-              href="#portfolio"
-              class="button button-flex disabled"
-              @click="sendMessage()"
+              class="button button-flex"
+              disabled
             >
               {{ $t('main.contact.form.sending') }}
               <i class="uil uil-spinner-alt button__icon spinner"></i>
-            </a>
-
-            <a
+            </button>
+            <button
               v-else
+              type="button"
               class="button button-flex"
-              :class="{ disabled: isMissingInput || isSending }"
+              :class="{ disabled: isMissingInput }"
+              :disabled="isMissingInput"
               @click="sendMessage()"
             >
               {{ $t('main.contact.form.send') }}
               <i class="uil uil-message button__icon send-icon"></i>
-            </a>
+            </button>
           </div>
         </div>
       </form>
