@@ -154,6 +154,7 @@ const sendMessage = () => {
           <div>
             <a
               v-if="isSending"
+              href="#portfolio"
               class="button button-flex disabled"
               @click="sendMessage()"
             >
